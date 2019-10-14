@@ -39,7 +39,7 @@ class Triangle
 end
 
   class TriangleError < StandardError
-    def message
-      "you done goofed!"
-    end
+    #def message
+      #"you done goofed!"
+    #end
   end
