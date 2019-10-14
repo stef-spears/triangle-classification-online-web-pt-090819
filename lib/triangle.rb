@@ -12,6 +12,8 @@ class Triangle
   def kind
     
     # put sides in an array, iterate thru
+    # if any side < 0
+    # throw error
     
     @lengths.each do |side|
       if side < 0
@@ -22,8 +24,7 @@ class Triangle
       end
     end
     
-    # if any side < 0
-    # throw error 
+     
     # elsif all 3 sides have same length
     # i.e. if side_1 == side_2 && side_2 == side_3
     # :equilateral
@@ -36,7 +37,7 @@ class Triangle
   
     class TriangleError < StandardError
       def message
-        "you done goofed"
+        "you done goofed!"
       end
     end
     
