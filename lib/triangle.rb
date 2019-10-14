@@ -11,9 +11,7 @@ class Triangle
   
   def kind
     
-    
     # if any side < 0 or any two sides are less than the third side raise error
-    
       if side <= 0 || (@side_1 + @side_2 < @side_3) || (@side_2 + @side_3 < @side_1) || (@side_1 + @side_3 < @side_2)
         #begin
         raise TriangleError
@@ -21,38 +19,27 @@ class Triangle
         #end
         #puts error.message
         
-    # elsif all 3 sides have same length
-    # i.e. if side_1 == side_2 && side_2 == side_3
+    # if all 3 sides have same length
     # :equilateral
-    
         elsif @side_1 == @side_2 && @side_2 == @side_3
           "#{:equilateral}"
          
-    # elsif only 2 sides are equivalent 
-    # :isosceles
-    
+    # if all 3 are different
+    # :scalene
         elsif (@side_1 != @side_2 && @side_1 != @side_3 && @side_2 != @side_3)
           "#{:scalene}"
           
+    # if only 2 sides are equivalent 
+    # :isosceles
         else "#{:isosceles}"
       end
+      
     end
-    
-     
-
-    
-    # if all 3 are different
-    #
-    # scalene
-  
-    
-    
-  end
   
 end
 
-  class TriangleError < StandardError
+  #class TriangleError < StandardError
     #def message
     #  "you done goofed!"
     #end
-  end
+  #end
