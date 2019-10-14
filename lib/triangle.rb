@@ -12,12 +12,8 @@ class Triangle
   def kind
     
     # if any side < 0 or any two sides are less than the third side raise error
-      if (@side_1 + @side_2 < @side_3) || (@side_2 + @side_3 < @side_1) || (@side_1 + @side_3 < @side_2) || @sides.any? {|n| n <= 0}
-        #begin
+      if (@side_1 + @side_2 <= @side_3) || (@side_2 + @side_3 <= @side_1) || (@side_1 + @side_3 <= @side_2) || @sides.any? {|n| n <= 0}
         raise TriangleError
-        #rescue TriangleError => error
-        #end
-        #puts error.message
         
     # if all 3 sides have same length
     # :equilateral
@@ -35,10 +31,8 @@ class Triangle
       end
       
     end
+    
   class TriangleError < StandardError
-    #def message
-      #"you done goofed!"
-    #end
   end
 end
 
