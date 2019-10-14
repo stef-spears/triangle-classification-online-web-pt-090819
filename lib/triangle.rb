@@ -15,26 +15,26 @@ class Triangle
     # if any side < 0
     # throw error
     
-    @lengths.each do |side|
-      if side < 0 || (@lengths[0] + @lengths[1] < @lengths[2]) || (@lengths[1] + @lengths[2] < @lengths[0]) || (@lengths[0] + @lengths[2] < @lengths[1])
+      if side <= 0 || (@lengths[0] + @lengths[1] < @lengths[2]) || (@lengths[1] + @lengths[2] < @lengths[0]) || (@lengths[0] + @lengths[2] < @lengths[1])
         begin
         raise TriangleError
         rescue TriangleError => error
         end
         puts error.message
         
-        
+    # elsif all 3 sides have same length
+    # i.e. if side_1 == side_2 && side_2 == side_3
+    # :equilateral
+    
         elsif side_1 == side_2 && side_2 == side_3
-          
-          
+          "#{:equilateral}"
+         
         
       end
     end
     
      
-    # elsif all 3 sides have same length
-    # i.e. if side_1 == side_2 && side_2 == side_3
-    # :equilateral
+
     # elsif only 2 sides are equivalent 
     #
     # :isosceles
