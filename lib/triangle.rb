@@ -6,38 +6,41 @@ class Triangle
     @side_1 = side_1
     @side_2 = side_2
     @side_3 = side_3
-    @lengths = [side_3, side_2, side_1].sort!
+   # @lengths = [side_3, side_2, side_1].sort!
   end
   
   def kind
     
-    # put sides in an array, iterate thru
-    # if any side < 0
-    # throw error
     
-      if side <= 0 || (@lengths[0] + @lengths[1] < @lengths[2]) || (@lengths[1] + @lengths[2] < @lengths[0]) || (@lengths[0] + @lengths[2] < @lengths[1])
-        begin
+    # if any side < 0 or any two sides are less than the third side raise error
+    
+      if side <= 0 || (@side_1 + @side_2 < @side_3) || (@side_2 + @side_3 < @side_1) || (@side_1 + @side_3 < @side_2)
+        #begin
         raise TriangleError
-        rescue TriangleError => error
-        end
-        puts error.message
+        #rescue TriangleError => error
+        #end
+        #puts error.message
         
     # elsif all 3 sides have same length
     # i.e. if side_1 == side_2 && side_2 == side_3
     # :equilateral
     
-        elsif side_1 == side_2 && side_2 == side_3
+        elsif @side_1 == @side_2 && @side_2 == @side_3
           "#{:equilateral}"
          
-        
+    # elsif only 2 sides are equivalent 
+    # :isosceles
+    
+        elsif (@side_1 != @side_2 && @side_1 != @side_3 && @side_2 != @side_3)
+          "#{:scalene}"
+          
+        else "#{:isosceles}"
       end
     end
     
      
 
-    # elsif only 2 sides are equivalent 
-    #
-    # :isosceles
+    
     # if all 3 are different
     #
     # scalene
@@ -49,7 +52,7 @@ class Triangle
 end
 
   class TriangleError < StandardError
-    def message
-      "you done goofed!"
-    end
+    #def message
+    #  "you done goofed!"
+    #end
   end
