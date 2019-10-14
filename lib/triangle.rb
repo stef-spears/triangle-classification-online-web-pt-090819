@@ -23,12 +23,7 @@ class Triangle
     # if all 3 are different
     #
     # scalene
-    
-    if 
-      elsif
-    else
-    end
-    
+  
     class TriangleError < StandardError
     end
     
