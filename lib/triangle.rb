@@ -6,7 +6,7 @@ class Triangle
     @side_1 = side_1
     @side_2 = side_2
     @side_3 = side_3
-    @lengths = [side_3, side_2, side_1]
+    @lengths = [side_3, side_2, side_1].sort!
   end
   
   def kind
