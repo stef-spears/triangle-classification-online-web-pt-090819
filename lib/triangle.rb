@@ -16,7 +16,7 @@ class Triangle
     # throw error
     
     @lengths.each do |side|
-      if side < 0 || (@lengths[0] + @lengths[1] < @lengths[2]) || 
+      if side < 0 || (@lengths[0] + @lengths[1] < @lengths[2]) || (@lengths[1] + @lengths[2] < @lengths[0]) || (@lengths[0] + @lengths[1] < @lengths[2])
         begin
         raise TriangleError
         rescue TriangleError => error
