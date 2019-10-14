@@ -19,9 +19,10 @@ class Triangle
       if side < 0
         #begin
        # raise TriangleError
-        #rescue TriangleError => error 
+        #rescue TriangleError => error
+        #end
         puts "oof" #error.message
-        end
+        
         
         elsif side_1 == side_2 && side_2 == side_3
           :equilateral
