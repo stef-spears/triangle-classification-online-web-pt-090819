@@ -17,10 +17,10 @@ class Triangle
     
     @lengths.each do |side|
       if side < 0
-        begin
-        raise TriangleError
-        rescue TriangleError => error 
-        puts error.message
+        #begin
+       # raise TriangleError
+        #rescue TriangleError => error 
+        puts "oof" #error.message
         end
         
         elsif side_1 == side_2 && side_2 == side_3
@@ -41,11 +41,11 @@ class Triangle
     #
     # scalene
   
-    class TriangleError < StandardError
-      def message
-        "you done goofed!"
-      end
-    end
+    #class TriangleError < StandardError
+     # def message
+    #    "you done goofed!"
+    #  end
+   # end
     
   end
   
