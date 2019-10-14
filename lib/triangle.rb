@@ -22,16 +22,16 @@ class Triangle
     # if all 3 sides have same length
     # :equilateral
         elsif @side_1 == @side_2 && @side_2 == @side_3
-          "#{:equilateral}"
+          :equilateral
          
     # if all 3 are different
     # :scalene
         elsif (@side_1 != @side_2 && @side_1 != @side_3 && @side_2 != @side_3)
-          "#{:scalene}"
+          :scalene
           
     # if only 2 sides are equivalent 
     # :isosceles
-        else "#{:isosceles}"
+        else :isosceles
       end
       
     end
