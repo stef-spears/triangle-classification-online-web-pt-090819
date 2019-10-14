@@ -24,8 +24,8 @@ class Triangle
     #
     # scalene
   
-    class TriangleError < StandardError
-    end
+    #class TriangleError < StandardError
+    #end
     
   end
   
