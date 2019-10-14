@@ -1,18 +1,18 @@
 class Triangle
   
-  attr_reader :side_1, :side_2, :side_3, :lengths
+  attr_reader :side_1, :side_2, :side_3, :sides
   
   def initialize(side_1, side_2, side_3)
     @side_1 = side_1
     @side_2 = side_2
     @side_3 = side_3
-   # @lengths = [side_3, side_2, side_1].sort!
+    @sides = [side_3, side_2, side_1]
   end
   
   def kind
     
     # if any side < 0 or any two sides are less than the third side raise error
-      if side <= 0 || (@side_1 + @side_2 < @side_3) || (@side_2 + @side_3 < @side_1) || (@side_1 + @side_3 < @side_2)
+      if (@side_1 + @side_2 < @side_3) || (@side_2 + @side_3 < @side_1) || (@side_1 + @side_3 < @side_2) || @sides.any
         #begin
         raise TriangleError
         #rescue TriangleError => error
