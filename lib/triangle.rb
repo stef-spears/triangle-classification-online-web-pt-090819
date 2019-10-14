@@ -10,6 +10,14 @@ class Triangle
   
   def kind
     
+    # if all 3 sides have same length 
+    # :equilateral
+    # 
+    
+    if 
+      elsif
+    else
+    end
     
     class TriangleError < StandardError
     end
